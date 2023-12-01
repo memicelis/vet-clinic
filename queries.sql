@@ -130,6 +130,11 @@ ORDER BY animal_count DESC
 LIMIT 1;
 
 
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+
 SELECT a.name AS last_animal_seen
 FROM visits v
 INNER JOIN vets w ON v.vet_id = w.id
@@ -191,3 +196,4 @@ FROM (
     LIMIT 1
 ) AS most_visited_species
 JOIN species s ON most_visited_species.species_id = s.id;
+
